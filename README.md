@@ -18,7 +18,7 @@ Cloud-native SIEM for multi-tier application security. Detects web attacks, SQL 
 Modern web applications are vulnerable to multi-stage attacks that span across different infrastructure layers. Traditional monitoring approaches create blind spots:
 
 **The Challenge:**
-- Web servers, application servers, and databases log events independently
+- Web clients, application servers, and databases log events independently
 - Security teams can't see the full attack chain when threats move laterally
 - By the time a breach is discovered, attackers have already exfiltrated data
 
@@ -26,7 +26,7 @@ Modern web applications are vulnerable to multi-stage attacks that span across d
 ```
 1. Attacker scans web application for vulnerabilities
 2. Exploits SQL injection on frontend
-3. Compromises web server
+3. Compromises web client
 4. Pivots to application server via SSH
 5. Moves laterally to database
 6. Exfiltrates sensitive data
@@ -65,7 +65,7 @@ The SIEM receives logs from all tiers, correlates suspicious activity and genera
 ### 3-Tier Application Architecture
 
 **Client Tier (Presentation Layer)**
-- Nginx web server serving static content
+- Nginx serving the web client (static frontend content)
 - Public-facing attack surface
 - Logs: HTTP requests, SSH attempts, system activity
 
@@ -101,7 +101,7 @@ The SIEM receives logs from all tiers, correlates suspicious activity and genera
 - User data scripts for instance bootstrapping
 
 **Application Stack**
-- Nginx (web server)
+- Nginx (web client/frontend server)
 - Python Flask / Node.js (application server)
 - MySQL (database with query logging)
 
