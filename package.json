@@ -1,0 +1,27 @@
+{
+  "name": "cloud-siem-detection",
+  "version": "1.0.0",
+  "description": "Cloud-native SIEM for multi-tier application security. Detects web attacks, SQL injection, lateral movement, and data exfiltration using Elastic Stack on AWS infrastructure deployed with Terraform.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "format": "terraform fmt -recursive",
+    "lint": "tflint --recursive",
+    "lint:fix": "tflint --recursive --fix",
+    "check": "npm run format && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehdiougadi/cloud-siem-detection.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mehdiougadi/cloud-siem-detection/issues"
+  },
+  "homepage": "https://github.com/mehdiougadi/cloud-siem-detection#readme"
+}

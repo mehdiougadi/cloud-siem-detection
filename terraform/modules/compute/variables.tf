@@ -23,7 +23,7 @@ variable "security_group_id" {
   type        = string
 }
 
-variable "user_data_id" {
+variable "user_data" {
   description = "The user data script or configuration to run at instance launch"
   type        = string
 }
