@@ -33,7 +33,7 @@ variable "key_name" {
   type        = string
 }
 
-variable "count" {
+variable "instance_count" {
   description = "The number of EC2 instances to create"
   type        = number
 }
